@@ -1,0 +1,41 @@
+/* Fondo de la ventana */
+.root-pane {
+    -fx-background-color: #f5f7fa;
+}
+
+/* Título */
+.main-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #17324d;
+}
+
+/* Campos de texto, listas y fecha */
+.text-field, .combo-box, .date-picker {
+    -fx-border-color: #c7d0da;
+    -fx-border-radius: 4px;
+}
+
+/* Botones */
+.button {
+    -fx-background-color: #e5ebf1;
+    -fx-font-weight: bold;
+}
+
+.button-primary {
+    -fx-background-color: #1f5f99;
+    -fx-text-fill: white;
+}
+
+/* Tabla */
+.table-view {
+    -fx-border-color: #d5dde5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #17324d;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}

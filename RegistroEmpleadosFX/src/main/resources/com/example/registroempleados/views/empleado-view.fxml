@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.registroempleados.controller.EmpleadoController"
+      stylesheets="@../estilos/estilos.css"
+      spacing="12" styleClass="root-pane">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="REGISTRO DE EMPLEADOS" styleClass="main-title"/>
+
+    <GridPane hgap="12" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="110" halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints minWidth="80" halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <Label text="Nombres:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNombres" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Apellidos:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtApellidos" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+        <Label text="Cédula:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtCedula" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Correo:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtCorreo" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+        <Label text="Teléfono:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTelefono" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Cargo:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtCargo" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+        <Label text="Departamento:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cmbDepartamento" promptText="Seleccione..." maxWidth="Infinity" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Salario:" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtSalario" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+        <Label text="Fecha contratación:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dpFechaContratacion" maxWidth="Infinity" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Estado:" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+        <ComboBox fx:id="cmbEstado" promptText="Seleccione..." maxWidth="Infinity" GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="btnLimpiar" text="Limpiar" onAction="#limpiarFormulario"/>
+        <Button fx:id="btnActualizar" text="Actualizar tabla" onAction="#actualizarTabla"/>
+        <Button fx:id="btnGuardar" text="Guardar empleado" onAction="#guardarEmpleado" styleClass="button-primary"/>
+    </HBox>
+
+    <TableView fx:id="tblEmpleados" VBox.vgrow="ALWAYS">
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colNombres" text="Nombres"/>
+            <TableColumn fx:id="colApellidos" text="Apellidos"/>
+            <TableColumn fx:id="colCedula" text="Cédula"/>
+            <TableColumn fx:id="colCorreo" text="Correo"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono"/>
+            <TableColumn fx:id="colCargo" text="Cargo"/>
+            <TableColumn fx:id="colDepartamento" text="Departamento"/>
+            <TableColumn fx:id="colSalario" text="Salario"/>
+            <TableColumn fx:id="colFechaContratacion" text="Fecha contratación"/>
+            <TableColumn fx:id="colEstado" text="Estado"/>
+        </columns>
+    </TableView>
+</VBox>

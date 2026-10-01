@@ -1,0 +1,4 @@
+com\example\registroempleados\database\DatabaseConnection.class
+com\example\registroempleados\RegistroEmpleadosApplication.class
+com\example\registroempleados\model\Empleado.class
+com\example\registroempleados\controller\EmpleadoController.class
